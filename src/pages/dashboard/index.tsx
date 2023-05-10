@@ -4,7 +4,7 @@ import React from "react";
 import {Layout} from "@/layouts";
 import {DashboardLayout} from "@/layouts/dashboard-layout";
 import {Files} from "@/modules/files";
-import {FileItem} from "@/api";
+import {FileItem} from "@/api/dto/files.dto";
 import {api} from "@/api";
 
 

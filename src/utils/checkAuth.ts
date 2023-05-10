@@ -2,6 +2,7 @@ import { GetServerSidePropsContext } from "next";
 import nookies from "nookies";
 import axios from "@/core/axios";
 import {api} from  '@/api'
+import {paths} from "@/core/paths";
 
 
 export const checkAuth = async (ctx: GetServerSidePropsContext) => {
@@ -18,7 +19,7 @@ export const checkAuth = async (ctx: GetServerSidePropsContext) => {
     } catch (err) {
         return {
             redirect: {
-                destination: "/dashboard/auth",
+                destination: paths.pages.auth,
                 permanent: false,
             },
         };

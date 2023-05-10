@@ -2,9 +2,10 @@ import Head from "next/head";
 import RegisterForm from "@/components/auth/register-form";
 import LoginForm from "@/components/auth/login-form";
 import {Tabs, TabsProps} from "antd";
+import {NextPage} from "next";
 
 
-export default function AuthPage() {
+const AuthPage: NextPage = () => {
     const items: TabsProps['items'] = [
         {
             key: '1',
@@ -29,7 +30,8 @@ export default function AuthPage() {
             
             <main>
                 <div className={'w-screen h-screen flex items-center justify-center'}>
-                    <div className={'p-8 bg-white rounded-md'} style={{width: '100%', maxWidth: '360px', minWidth: '100px'}}>
+                    <div className={'p-8 bg-white rounded-md'}
+                         style={{width: '100%', maxWidth: '360px', minWidth: '100px'}}>
                         <Tabs
                             defaultActiveKey="1"
                             items={items}
@@ -40,3 +42,5 @@ export default function AuthPage() {
         </>
     )
 }
+
+export default AuthPage

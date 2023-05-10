@@ -1,6 +1,17 @@
 import Head from 'next/head'
+import {NextPage} from "next";
+import {useRouter} from "next/router";
+import {paths} from "@/core/paths";
+import {useEffect} from "react";
 
-export default function Home() {
+
+const HomePage: NextPage = () => {
+    const router = useRouter()
+    
+    useEffect(() => {
+        router.push(paths.pages.dashboard)
+    }, [])
+    
     return (
         <>
             <Head>
@@ -11,8 +22,10 @@ export default function Home() {
             </Head>
             
             <main>
-                EBATEL
+            
             </main>
         </>
     )
 }
+
+export default HomePage
